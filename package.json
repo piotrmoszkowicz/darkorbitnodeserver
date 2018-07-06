@@ -1,0 +1,17 @@
+{
+  "name": "darkorbitserver",
+  "version": "1.0.0",
+  "description": "This is my DarkOrbit server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nommo",
+  "license": "ISC",
+  "dependencies": {
+    "flashio": "0.0.2",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "underscore": "^1.8.3"
+  }
+}
