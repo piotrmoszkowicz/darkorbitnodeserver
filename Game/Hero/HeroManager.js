@@ -66,7 +66,7 @@ let HeroManager = {
   },
 
   settings: function(socket, params, fromLogin){
-    if (socket.darkorbit.settings != params){
+    if (socket.darkorbit.settings !== params){
       //TODO: Save new settings to DB!
 
       socket.darkorbit.settings = params;
@@ -126,7 +126,7 @@ let HeroManager = {
   },
 
   updateAmmo: function(socket, params){
-    if (socket.darkorbit.ammo != params){
+    if (socket.darkorbit.ammo !== params){
       //TODO: Save new ammo status to DB!
 
       socket.darkorbit.ammo = params;
@@ -141,7 +141,7 @@ let HeroManager = {
   },
 
   updateRockets: function(socket, params){
-    if (socket.darkorbit.rockets != params){
+    if (socket.darkorbit.rockets !== params){
       //TODO: Save new rocket status to DB!
 
       socket.darkorbit.rockets = params;
@@ -156,7 +156,7 @@ let HeroManager = {
   },
 
   updateDrones: function(socket, params){
-    if(socket.darkorbit.drones != params){
+    if(socket.darkorbit.drones !== params){
       socket.darkorbit.drones = params;
     }
 
@@ -171,7 +171,7 @@ let HeroManager = {
   },
 
   updateTitle: function(socket, param){
-    if(socket.darkorbit.hero.title != param){
+    if(socket.darkorbit.hero.title !== param){
       //TODO: Save new title to DB!
 
       socket.darkorbit.hero.title = param;
@@ -207,7 +207,7 @@ let HeroManager = {
 
   changeConfig: function(socket, newConfig){
     newConfig = parseInt(newConfig);
-    if((newConfig != 1 && newConfig != 2) || socket.darkorbit.hero.currentConfig == newConfig){
+    if((newConfig !== 1 && newConfig !== 2) || socket.darkorbit.hero.currentConfig === newConfig){
       let packetMaker = new PacketMaker('A');
       packetMaker.addParam('STD');
       packetMaker.addParam('You cannot change to that config!');

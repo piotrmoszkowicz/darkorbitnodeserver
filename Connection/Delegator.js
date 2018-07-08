@@ -30,7 +30,7 @@ class Delegator {
 
   delegate(socket, packetObject){
     for(let i=0;i<this.delegationArray.length;i++){
-      if(packetObject.header == this.delegationArray[i].header){
+      if(packetObject.header === this.delegationArray[i].header){
         if (this.delegationArray[i].needArgs){
           this.delegationArray[i].handler(socket, packetObject.params);
         }

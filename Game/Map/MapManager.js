@@ -26,7 +26,7 @@ let MapManager = {
     let map = _.findWhere(this.mapList, {mapId: mapId});
     if(map.base){
       let packetMaker = new PacketMaker('s');
-      if (map.base == 1){
+      if (map.base === 1){
         //MMO
         packetMaker.addParam(0); //stationId
         packetMaker.addParam(1); //nothing XD
@@ -36,7 +36,7 @@ let MapManager = {
         packetMaker.addParam(1000); //stationX
         packetMaker.addParam(1000); //stationY
       }
-      else if (map.base == 2){
+      else if (map.base === 2){
         //EIC
         packetMaker.addParam(0); //stationId
         packetMaker.addParam(1); //nothing XD
@@ -46,7 +46,7 @@ let MapManager = {
         packetMaker.addParam(20500); //stationX
         packetMaker.addParam(1000); //stationY
       }
-      else if (map.base == 3){
+      else if (map.base === 3){
         //VRU
         packetMaker.addParam(0); //stationId
         packetMaker.addParam(1); //nothing XD
@@ -66,7 +66,7 @@ let MapManager = {
 
   getCloseGate: function(curX, curY, mapId){
     let map = _.findWhere(this.mapList, {mapId: mapId});
-    if(map.gates.length == 0){
+    if(map.gates.length === 0){
       return false;
     }
 
@@ -163,6 +163,6 @@ let MapManager = {
     }
     return false
   }
-}
+};
 
 module.exports = { MapManager };
